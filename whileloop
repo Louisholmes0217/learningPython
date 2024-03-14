@@ -1,0 +1,10 @@
+# while loop
+
+# runs code while a condition is met
+counter = 0
+
+while counter < 10:
+    print(counter)
+    counter += 1
+    
+print("loop over")
