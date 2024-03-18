@@ -20,7 +20,7 @@ car = Car()
 #car.turn_on()
 #car.drive() This code can be represented as
 
-car.turn_on().drive() # this runs the first method, and then runst the second against the
+#car.turn_on().drive() # this runs the first method, and then runst the second against the
                       # returned value, being "self" which is car.
 
 #car.turn_on().drive().brake().turn_off()
