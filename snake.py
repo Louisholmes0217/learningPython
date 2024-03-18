@@ -25,8 +25,26 @@ tail = 9
 input = "a"
 while(True):
 
-    screen[head] = "O"
-    screen[tail] = " "
+    if is_pressed("d"):
+        input = "d"
+    elif is_pressed("s"):
+        input = ("s")
+    elif is_pressed("a"):
+        input = "a"
+    elif is_pressed("w"):
+        input = "w"
+    
+    if "X" not in screen:
+        fruit = random.randint(0,20)
+        fruit = fruit * random.randint(0,10)
+        screen[fruit] = "X"
+
+
+    if screen[head] != "X":
+        screen[head] = "O"
+        screen[tail] = " "
+
+
 
 
     if input == "w":
@@ -59,14 +77,6 @@ while(True):
             head -= 20
     os.system('cls')
     print("Next Screen")
-    if is_pressed("d"):
-        input = "d"
-    elif is_pressed("s"):
-        input = ("s")
-    elif is_pressed("a"):
-        input = "a"
-    elif is_pressed("w"):
-        input = "w"
 
     for i in screen:
         print(i, end="")
