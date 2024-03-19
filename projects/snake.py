@@ -4,7 +4,17 @@ import os
 import time
 import random
 from keyboard import is_pressed
+import threading
+import msvcrt
 
+input = "d"
+
+def get_input():
+    while True:
+        key_press = msvcrt.getch()
+        if key_press != "":
+            
+            
 
 
 screen = [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","\n",
@@ -20,19 +30,12 @@ screen = [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," 
 
 head = 10
 tail = 9
-
-
 input = "a"
-while(True):
 
-    if is_pressed("d"):
-        input = "d"
-    elif is_pressed("s"):
-        input = ("s")
-    elif is_pressed("a"):
-        input = "a"
-    elif is_pressed("w"):
-        input = "w"
+x = threading.Thread(target=get_input, args=(), daemon=True)
+
+x.start()
+while(True):
     
     if "X" not in screen:
         fruit = random.randint(0,20)
@@ -43,9 +46,6 @@ while(True):
     if screen[head] != "X":
         screen[head] = "O"
         screen[tail] = " "
-
-
-
 
     if input == "w":
         tail = head
