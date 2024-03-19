@@ -42,7 +42,7 @@ print(time.perf_counter())
 
 # waiting for one thread to wait for another thread to finish
 x.join()
-#y.join()
-#z.join()
+y.join()
+z.join()
 
 print("done")

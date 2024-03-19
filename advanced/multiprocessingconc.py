@@ -3,6 +3,7 @@
 from multiprocessing import Process, cpu_count
 import time
 time_start=(time.perf_counter())
+print(cpu_count())
 
 def counter(num):
     count = 0
