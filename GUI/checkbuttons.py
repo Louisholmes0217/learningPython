@@ -8,7 +8,7 @@ def display():      # function runs when the checkbox is toggled
     else:
         print("You dont agree :c")
 
-x = IntVar()    # special tkinter way of storing a value from checkbox
+x = IntVar()    # special tkinter way of storing a value from checkbox, can be stringVar or boolVar
 check_button = Checkbutton(window,
                            text="I aggree to this thing",
                            variable=x,  # variable modified by this box
